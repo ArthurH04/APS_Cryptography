@@ -12,8 +12,14 @@ def descriptografar(texto_cifrado, chave):
 
 diretorioCorrentee = os.getcwd()
 
-with open('C:/Users/Pichau/OneDrive/Documentos/estudos/2semestre-facul/APS/Arquivo01.txt', 'r', encoding='utf-8') as arq:
-    print(criptografia(arq.read(), '1000'))
+with open('-', 'r', encoding='utf-8') as acesso:
+    acesso.read
 
-with open('C:/Users/Pichau/OneDrive/Documentos/estudos/2semestre-facul/APS/Arquivo02.txt', 'r', encoding='utf-8') as arq2:
-    print(descriptografar(arq2.read(), '1000'))
+with open('-', 'r', encoding='utf-8') as arq:
+    arquivo_criptografado = criptografia(arq.read(),str(acesso))
+    print(arquivo_criptografado)
+
+with open('-', 'w+', encoding='utf-8') as arq2:
+    arq2.write(arquivo_criptografado)
+    arq2.seek(0)
+    print(descriptografar(arq2.read(), str(acesso)))
