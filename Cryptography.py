@@ -143,8 +143,7 @@ while True:
             with open(diretorioDestino + arquivoDescriptografadoNome + ".txt", "w+", encoding='utf-8' ) as arqDescripto:
                 arqDescripto.write(arquivoDescriptografado)
                 arqDescripto.seek(0)
-                print(arqDescripto.read())
-            
+                            
             os.remove(diretorioArquivoCripto)
             os.remove(diretorioAcesso)
 
